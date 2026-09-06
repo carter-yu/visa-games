@@ -136,6 +136,7 @@ This app is **not** a second copy of cec-vivisystem. It is a **sibling vivisyste
 11. **Progress visibility** — end of session: update `PROGRESS.md` (create it if missing).
 12. **Phase docs inherit standards** — a phase may narrow **scope**, never waive tests or logging/retention.
 13. **Secrets stay local** — parent PIN lives in local persistence (family device). Never ship a default PIN in the repo that unlocks production. Never log the PIN.
+14. **Assign a version number** — every slice that the family can see after a reload gets a SemVer `MAJOR.MINOR.PATCH` (current start: **1.0.1**). Bump **PATCH** for a fix or small UX change, **MINOR** for a new weekend capability, **MAJOR** only for a breaking persist/shape or a family-visible product change. In the same change: set `src/lib/version.ts` (`APP_VERSION` + bilingual `LATEST_DEV`) and `package.json`; show `v…` on **every** screen; put version + a short latest-dev note on the parent admin page; note it in `PROGRESS.md`. Never ship a visible change without bumping the version — that number is how we know the reload worked.
 
 ### Architecture shape (hive, not a brain)
 

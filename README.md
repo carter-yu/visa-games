@@ -14,10 +14,34 @@ Honest limit: a website cannot OS-lock macOS. Fullscreen + Screen Time.
 - Code, documentation, design, comments, commits: English only
 - Never Simplified Chinese in the UI
 
+## Run
+
+```bash
+npm install
+npm test
+npm run dev
+```
+
+Open http://127.0.0.1:5173 — first-run parent PIN, then three cards.
+
+```bash
+npm run typecheck
+npm run build
+```
+
+Auth/DB stay off. Settings persist in localStorage key `homework-first-v1`.
+
+## Version numbers
+
+Ground rule 14 in the constitution: every family-visible slice gets a SemVer
+number. After reload, the corner badge and the admin “版本 / Version” block
+must match `src/lib/version.ts`. Bump that file and `package.json` together.
+
 ## Current status
 
 See [PROGRESS.md](PROGRESS.md). Constitution is in
 [visa-games-grok-build-kick-start.md](visa-games-grok-build-kick-start.md).
+Phase 0 tests: `tests/phase0.test.ts` (P1–P9).
 
 ## Core documents
 

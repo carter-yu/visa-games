@@ -17,6 +17,7 @@ coverage/
 *.swp
 *~
 
+# Personal machine notes — never commit (PIN hints, Mini paths, deploy runbooks)
 *.local.md
 my-notes/
 logs/
